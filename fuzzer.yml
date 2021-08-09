@@ -1,0 +1,119 @@
+fuzzer:
+  rules:
+    - ascii
+    - hexascii
+    - binary
+    - base64
+    - urlhex
+    - urlunicode
+  min_length: 1
+  max_length: 10000
+  steps: random # or ascending
+  iterations: 10000
+  transformations:
+    - base64Decode
+    - cmdLine
+    - compressWhitespace
+    - cssDecode
+    - escapeSeqDecode
+    - hexEncode
+    - htmlEntityDecode
+    - jsDecode
+    - length
+    - lowercase
+    - md5
+    - none
+    - normalisePath
+    - normalisePathWin
+    - normalizePath
+    - normalizePathWin
+    - removeComments
+    - removeCommentsChar
+    - removeNulls
+    - removeWhitespace
+    - replaceComments
+    - replaceNulls
+    - sha1
+    - urlDecode
+    - urlDecodeUni
+    - urlEncode
+    - utf8toUnicode
+  operators:
+  - name: beginsWith
+    args:
+      - aa
+  - name: rx
+    args:
+      - aa
+  - name: eq
+    args:
+      - aa
+  - name: detectSQLi
+    args:
+      - 
+  - name: detectXSS
+    args:
+      - 
+  - name: contains
+    args:
+      - aa
+  - name: endsWith
+    args:
+      - aa
+#  - name: inspectFile
+#    args:
+#      - aa
+  - name: ge
+    args:
+      - 5
+  - name: gt
+    args:
+      - 5
+  - name: le
+    args:
+      - 5
+  - name: lt
+    args:
+      - 5
+  - name: unconditionalMatch
+    args:
+      - aa
+  - name: within
+    args:
+      - aa
+#  - name: pmFromFile
+#    args:
+#      - aa
+  - name: pm
+    args:
+      - aa
+  - name: validateByteRange
+    args:
+      - aa
+  - name: validateUrlEncoding
+    args:
+      - aa
+  - name: streq
+    args:
+      - aa
+  - name: ipMatch
+    args:
+      - aa
+#  - name: ipMatchFromFile
+#    args:
+#      - aa
+#  - name: geoLookup
+#    args:
+#      - aa
+#  - name: rbl
+#    args:
+#      - aa
+  - name: validateUtf8Encoding
+    args:
+      - aa
+  - name: noMatch
+    args:
+      - aa
+#  - name: validateNid
+#    args:
+#      - cl
